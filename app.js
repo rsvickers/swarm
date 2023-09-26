@@ -98,34 +98,25 @@ function drawPeople() {
     })
 }
 
-
 function changeLocation() {
     people.forEach(person => {
-        if (
-            person.picture == '🦇'
-        ) {
-            return
-        }
-
         const randomLocationIndex = Math.floor(Math.random() * locations.length)
         const randomLocation = locations[randomLocationIndex]
-        people.location = randomLocation
+        person.location = randomLocation
 
     })
-
-    drawPeople()
 }
 
+// function vampireHunter() {
 
-function vampireHunter() {
 
-    const randomVampireHunterIndex = Math.floor(Math.random() * people.length)
-    const randomVampireHunter = people[randomVampireHunterIndex]
+//     const randomVampireHunterIndex = Math.floor(Math.random() * people.length)
+//     const randomVampireHunter = people[randomVampireHunterIndex]
 
-    randomVampireHunter.killsVampires = true
-    // console.log('whose the vampire hunter:', people)
+//     randomVampireHunter.killsVampires = true
+//     // console.log('whose the vampire hunter:', people)
 
-}
+// }
 
 
 function attackPeople(selectedLocation) {
@@ -133,16 +124,21 @@ function attackPeople(selectedLocation) {
         if (person.location == selectedLocation) {
             person.picture = "🦇"
             console.log(person)
+            return
         }
+
     })
+
+    changeLocation()
     drawPeople()
+
+
 }
 
 
 
 
 
-
 // SECTION calling functions
-vampireHunter()
+// vampireHunter()
 drawPeople() 
