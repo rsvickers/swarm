@@ -1,0 +1,12 @@
+/* SECTION elements */
+
+body {
+    background-color: black;
+}
+
+/* SECTION class and ID's */
+
+.box {
+    background-color: transparent;
+    outline-color: greenyellow;
+}
