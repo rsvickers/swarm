@@ -135,8 +135,9 @@ function attackPeople(selectedLocation) {
 
 }
 
+function winGame() {
 
-
+}
 
 
 // SECTION calling functions
